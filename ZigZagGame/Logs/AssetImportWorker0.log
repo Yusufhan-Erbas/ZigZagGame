@@ -244,3 +244,39 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 311.837811 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(ee60f397bf54c48ecb17cd0466079d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(ee60f397bf54c48ecb17cd0466079d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5b0a7b21063f28d309c7f392cbbee1') in 0.008639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.775984 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(975a3d90967fb492a8febf07eb578410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(975a3d90967fb492a8febf07eb578410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f03d92be56fc1c94d62e6beb9ef2aea') in 0.001735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.167275 seconds.
+  path: Assets/Sound
+  artifactKey: Guid(41f2751561b0c4ae084f7a4f6b871056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound using Guid(41f2751561b0c4ae084f7a4f6b871056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ac219f551808e20bc41125dce2bdad') in 0.002309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.194139 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(41223848be2e245248cbbadad94c8059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(41223848be2e245248cbbadad94c8059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '543f528e52285e16e59f509a5ceda56c') in 0.002546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.472474 seconds.
+  path: Assets/Materials/ZeminMat.mat
+  artifactKey: Guid(5c01657ba174a41418f80adfec57267a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ZeminMat.mat using Guid(5c01657ba174a41418f80adfec57267a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d85c6103154f92c02f118ec4a52dc6') in 0.805517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.235213 seconds.
+  path: Assets/Materials/ZeminMat.mat
+  artifactKey: Guid(5c01657ba174a41418f80adfec57267a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ZeminMat.mat using Guid(5c01657ba174a41418f80adfec57267a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6ceae9b64c7a8f79e3e9f65fb48058') in 0.016727 seconds 
