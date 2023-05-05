@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
 
     public static bool isDead=false;
 
+    public float velocityHard;
+
+    public int score = 0;
+
     private void Update()
     {
         if (isDead)
@@ -41,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 hareket = yon * speed * Time.deltaTime;//Our object movement value.
+        speed += Time.deltaTime *velocityHard;
         transform.position += hareket;//Adding movement value to our position.
     }
 
