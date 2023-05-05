@@ -8,15 +8,17 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float speed;
 
+    public GroundSpawner groundSpawner;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (yon.x == 0) //Object move Z axis
+            if (yon.x == 0) //Object move x axis
             {
                 yon = Vector3.left;
             }
-            else
+            else//Object move z axis.
             {
                 yon = Vector3.back;
             }
@@ -28,6 +30,15 @@ public class PlayerController : MonoBehaviour
         Vector3 hareket = yon * speed * Time.deltaTime;//Our object movement value.
         transform.position += hareket;//Adding movement value to our position.
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Zemin"))//if Player left ground new ground added.
+        {
+            groundSpawner.MakeGround();
+        }
+    }
+
 }
 
 

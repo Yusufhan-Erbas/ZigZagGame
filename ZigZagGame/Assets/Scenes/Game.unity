@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e3a14e646dd4a1cbcdadb772317939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 1687774076}
 --- !u!1 &1416833772
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +503,7 @@ GameObject:
   - component: {fileID: 1416833774}
   m_Layer: 0
   m_Name: Zemin
-  m_TagString: Untagged
+  m_TagString: Zemin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  groundSpawner: {fileID: 718971488}
 --- !u!54 &1687774082
 Rigidbody:
   m_ObjectHideFlags: 0

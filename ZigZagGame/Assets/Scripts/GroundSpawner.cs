@@ -14,14 +14,14 @@ public class GroundSpawner : MonoBehaviour
         }
     }
 
-    void MakeGround()
+    public void MakeGround()
     {
         Vector3 yon;
-        if (Random.Range(0, 2) == 0)
+        if (Random.Range(0, 2) == 0)//Random ground generated in x axis .
         {
             yon = Vector3.left;
         }
-        else
+        else// Random ground generated in z axis .
         {
             yon = Vector3.back;
         }
