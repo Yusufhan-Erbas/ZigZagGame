@@ -35,8 +35,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Zemin"))//if Player left ground new ground added.
         {
+            DestroyGround(collision.gameObject);
             groundSpawner.MakeGround();
         }
+    }
+
+    void DestroyGround(GameObject ground)
+    {
+        Destroy(ground);
     }
 
 }
