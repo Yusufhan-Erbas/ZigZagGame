@@ -10,8 +10,14 @@ public class PlayerController : MonoBehaviour
 
     public GroundSpawner groundSpawner;
 
+    public static bool isDead=false;
+
     private void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (yon.x == 0) //Object move x axis
@@ -23,6 +29,13 @@ public class PlayerController : MonoBehaviour
                 yon = Vector3.back;
             }
         }
+
+        if (transform.position.y < 0.1f)
+        {
+            isDead = true;
+            Debug.Log("Öldüm ben");
+            //Destroy(gameObject,3f);
+        }
     }
 
     private void FixedUpdate()
@@ -33,15 +46,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Zemin"))//if Player left ground new ground added.
+        if (collision.gameObject.CompareTag("Zemin"))
         {
-            DestroyGround(collision.gameObject);
+            StartCoroutine(DestroyGround(collision.gameObject));
             groundSpawner.MakeGround();
         }
     }
 
-    void DestroyGround(GameObject ground)
+    IEnumerator DestroyGround(GameObject ground)
     {
+        yield return new WaitForSeconds(0.05f);
+        ground.AddComponent<Rigidbody>();
+        yield return new WaitForSeconds(0.5f);
         Destroy(ground);
     }
 

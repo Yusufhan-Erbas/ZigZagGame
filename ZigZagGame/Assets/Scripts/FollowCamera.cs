@@ -14,6 +14,10 @@ public class FollowCamera : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (PlayerController.isDead)//if player dead,stop following to Player.
+        {
+            return;
+        }
         transform.position = target.transform.position + distance;//Camera follow same difference.
     }
 }
