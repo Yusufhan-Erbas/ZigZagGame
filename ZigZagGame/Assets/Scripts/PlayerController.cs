@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Vector3 yon = Vector3.left;
+
+    [SerializeField] float speed;
+
+    private void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (yon.x == 0) //Object move Z axis
+            {
+                yon = Vector3.left;
+            }
+            else
+            {
+                yon = Vector3.back;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        Vector3 hareket = yon * speed * Time.deltaTime;//Our object movement value.
+        transform.position += hareket;//Adding movement value to our position.
     }
 }
+
+
