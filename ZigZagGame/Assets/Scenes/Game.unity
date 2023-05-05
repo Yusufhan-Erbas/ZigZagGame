@@ -781,7 +781,7 @@ MonoBehaviour:
   speed: 3
   groundSpawner: {fileID: 718971488}
   velocityHard: 0.1
-  score: 0
+  scoreText: {fileID: 1467710282}
 --- !u!54 &1687774082
 Rigidbody:
   m_ObjectHideFlags: 0

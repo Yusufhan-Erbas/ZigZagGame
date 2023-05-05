@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class PlayerController : MonoBehaviour
 
     public float velocityHard;
 
-    public int score = 0;
+    float score = 0f;
+
+    float addAmount=1f;
+
+    [SerializeField] Text scoreText;
 
     private void Update()
     {
@@ -47,6 +52,10 @@ public class PlayerController : MonoBehaviour
         Vector3 hareket = yon * speed * Time.deltaTime;//Our object movement value.
         speed += Time.deltaTime *velocityHard;
         transform.position += hareket;//Adding movement value to our position.
+
+        score += speed * addAmount * Time.deltaTime;
+
+        scoreText.text =((int) score).ToString();
     }
 
     private void OnCollisionExit(Collision collision)
