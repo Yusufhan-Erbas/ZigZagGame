@@ -16,7 +16,16 @@ public class GroundSpawner : MonoBehaviour
 
     void MakeGround()
     {
-        lastGround = Instantiate(lastGround,lastGround.transform.position+Vector3.left,
+        Vector3 yon;
+        if (Random.Range(0, 2) == 0)
+        {
+            yon = Vector3.left;
+        }
+        else
+        {
+            yon = Vector3.back;
+        }
+        lastGround = Instantiate(lastGround,lastGround.transform.position+yon,
             lastGround.transform.rotation);
     }
 }
