@@ -14,13 +14,18 @@ public class PlayerController : MonoBehaviour
     [Header("Public Variable")]
     int bestScore = 0;
     public GroundSpawner groundSpawner;
-    public static bool isDead=false;
+    public static bool isDead=true;
     public float velocityHard;
     float score = 0f;
     float addAmount=1f;
 
     private void Start()
     {
+        if (RestartGame.isRestart)
+        {
+            isDead = false;
+            playGamePanel.SetActive(false);
+        }
         bestScore = PlayerPrefs.GetInt("BestScore");
         bestScoreText.text ="Best: "+ bestScore.ToString();
     }
@@ -51,6 +56,7 @@ public class PlayerController : MonoBehaviour
                 bestScore = (int)score;
                 PlayerPrefs.SetInt("BestScore", bestScore);
             }
+            restartPanel.SetActive(true);
             Destroy(gameObject,3f);
         }
     }
@@ -86,6 +92,12 @@ public class PlayerController : MonoBehaviour
         ground.AddComponent<Rigidbody>();
         yield return new WaitForSeconds(0.5f);
         Destroy(ground);
+    }
+
+    public void PlayGame()
+    {
+        isDead = false;
+        playGamePanel.SetActive(false);
     }
 
 }
